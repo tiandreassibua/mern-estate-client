@@ -16,10 +16,6 @@ export default function Profile() {
     const [fileUploadError, setFileUploadError] = useState(false);
     const [formData, setFormData] = useState({});
 
-    console.log(formData);
-    console.log(filePerc);
-    console.log(fileUploadError);
-
     // firebase storage
     // allow read;
     // allow write: if
@@ -95,12 +91,14 @@ export default function Profile() {
                     placeholder="username"
                     className="border p-3 rounded-lg"
                     id="username"
+                    value={currentUser.username}
                 />
                 <input
                     type="email"
                     placeholder="email"
                     className="border p-3 rounded-lg"
                     id="email"
+                    value={currentUser.email}
                 />
                 <input
                     type="password"
